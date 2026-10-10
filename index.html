@@ -1,0 +1,756 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Práce bez zraku</title>
+<meta name="description" content="Jak zaměstnat nevidomého nebo slabozrakého člověka. Podklady k přednášce Josefa Sarkányho na konferenci HRko 2026.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="cs_CZ">
+<meta property="og:url" content="https://dragonites91.github.io/prace-bez-zraku/">
+<meta property="og:title" content="Práce bez zraku: Nevidomý kolega? Začněte tady.">
+<meta property="og:description" content="Jak zaměstnat nevidomého nebo slabozrakého kolegu. Praktický průvodce pro HR a manažery od Josefa Sarkányho, HRko 2026.">
+<meta property="og:image" content="https://dragonites91.github.io/prace-bez-zraku/img/nahled.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Josef Sarkány u stěny z workshopu a nadpis Nevidomý kolega? Začněte tady.">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:ital,wght@0,400;0,600;0,700;1,400&family=Newsreader:ital,opsz,wght@0,6..72,500;0,6..72,600;1,6..72,500;1,6..72,600&display=swap">
+<style>
+/* Layout: deep petrol bands (hero, iceberg, closing call) alternate with light reading sections; one gold beam runs through the hero as in the HRko talk. Cards only where content is a set of choices. */
+:root {
+  --bg: #f2f4f1;
+  --bg-alt: #e8ece8;
+  --surface: #ffffff;
+  --ink: #142221;
+  --muted: #4b5a58;
+  --line: #d3dad6;
+  --deep: #0f2c2b;
+  --deep-2: #143837;
+  --deep-ink: #eef3f0;
+  --deep-muted: #b5c7c2;
+  --gold: #8a5d08;
+  --beam: #e0ad45;
+  --water: #1c4a4b;
+  --ice: #9cc7cc;
+  --ice-tip: #f4f8f7;
+  --font-display: "Newsreader", "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+  --font-body: "Atkinson Hyperlegible Next", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --step--1: 0.9rem;
+  --step-0: 1.0625rem;
+  --step-1: 1.3rem;
+  --step-2: 1.75rem;
+  --step-3: clamp(2rem, 4.5vw, 2.9rem);
+  --step-4: clamp(2.6rem, 6.5vw, 4.6rem);
+  --measure: 64ch;
+  --wrap: 74rem;
+  --radius: 6px;
+  --shadow: 0 1px 2px rgb(15 44 43 / 0.06), 0 8px 24px -12px rgb(15 44 43 / 0.18);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0d1716; --bg-alt: #111d1c; --surface: #172625; --ink: #e7ece9; --muted: #a2b1ad; --line: #2a3d3b;
+    --deep: #0a2120; --deep-2: #0f2b2a; --deep-ink: #eef3f0; --deep-muted: #a9bdb7; --gold: #e3b453; --beam: #e3b453;
+    --water: #153d3e; --ice: #7fb0b6; --ice-tip: #e6efed;
+    --shadow: 0 1px 2px rgb(0 0 0 / 0.3), 0 8px 24px -12px rgb(0 0 0 / 0.6);
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0d1716; --bg-alt: #111d1c; --surface: #172625; --ink: #e7ece9; --muted: #a2b1ad; --line: #2a3d3b;
+  --deep: #0a2120; --deep-2: #0f2b2a; --deep-ink: #eef3f0; --deep-muted: #a9bdb7; --gold: #e3b453; --beam: #e3b453;
+  --water: #153d3e; --ice: #7fb0b6; --ice-tip: #e6efed;
+  --shadow: 0 1px 2px rgb(0 0 0 / 0.3), 0 8px 24px -12px rgb(0 0 0 / 0.6);
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 5.5rem; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { animation: none !important; transition: none !important; } }
+body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--font-body); font-size: var(--step-0); line-height: 1.6; overflow-x: hidden; }
+a { color: var(--gold); text-underline-offset: 0.18em; text-decoration-thickness: 1px; }
+a:hover { text-decoration-thickness: 2px; }
+:focus-visible { outline: 3px solid var(--beam); outline-offset: 3px; border-radius: 2px; }
+h1, h2, h3 { text-wrap: balance; margin: 0; }
+p, blockquote, figure { margin: 0; }
+img { max-width: 100%; display: block; }
+.ic { width: 1.5rem; height: 1.5rem; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; flex: none; }
+.wrap { max-width: var(--wrap); margin-inline: auto; padding-inline: clamp(1rem, 4vw, 2.5rem); }
+
+.skip { position: absolute; left: 1rem; top: -4rem; z-index: 30; background: var(--beam); color: #1a1406; padding: 0.6rem 1rem; font-weight: 700; text-decoration: none; }
+.skip:focus { top: 1rem; }
+
+/* Buttons */
+.btn { display: inline-flex; align-items: center; gap: 0.55rem; padding: 0.8rem 1.25rem; font-weight: 700; text-decoration: none; border-radius: 999px; font-size: var(--step-0); line-height: 1.2; transition: transform .15s ease, background-color .15s ease, border-color .15s ease; }
+.btn .ic { width: 1.15rem; height: 1.15rem; stroke-width: 2; }
+.btn:hover { transform: translateY(-1px); }
+.btn-gold { background: var(--beam); color: #1a1406; }
+.btn-gold:hover { background: color-mix(in srgb, var(--beam) 82%, white); }
+.btn-ghost { color: var(--deep-ink); border: 1.5px solid color-mix(in srgb, var(--deep-ink) 40%, transparent); }
+.btn-ghost:hover { border-color: var(--deep-ink); }
+
+/* Header */
+.site-head { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 20; background: color-mix(in srgb, var(--deep) 94%, transparent); backdrop-filter: blur(8px); color: var(--deep-ink); border-bottom: 1px solid color-mix(in srgb, var(--deep-ink) 12%, transparent); }
+.site-head .wrap { display: flex; align-items: center; gap: 1.5rem; padding-block: 0.6rem; }
+.brand { display: inline-flex; align-items: center; gap: 0.6rem; font-family: var(--font-display); font-weight: 600; font-size: 1.25rem; color: var(--deep-ink); text-decoration: none; white-space: nowrap; }
+.brand-mark { display: grid; grid-template-columns: repeat(2, 5px); gap: 3px; }
+.brand-mark i { width: 5px; height: 5px; border-radius: 50%; background: color-mix(in srgb, var(--deep-ink) 30%, transparent); }
+.brand-mark i.on { background: var(--beam); }
+.nav { flex: 1; min-width: 0; overflow-x: auto; scrollbar-width: none; }
+.nav ul { list-style: none; margin: 0; padding: 0; display: flex; gap: 1.25rem; white-space: nowrap; justify-content: flex-end; }
+.nav a { color: var(--deep-muted); text-decoration: none; font-size: var(--step--1); padding-block: 0.4rem; display: inline-block; }
+.nav a:hover { color: var(--deep-ink); }
+.head-cta { padding: 0.5rem 1rem; font-size: var(--step--1); }
+
+/* Hero */
+.hero { background: var(--deep); color: var(--deep-ink); position: relative; overflow: hidden; isolation: isolate; }
+.hero::before { content: ""; position: absolute; inset: 0; z-index: -1; background: radial-gradient(60rem 30rem at 85% 10%, color-mix(in srgb, var(--beam) 14%, transparent), transparent 60%), radial-gradient(40rem 30rem at 0% 100%, var(--deep-2), transparent 70%); }
+.hero .wrap { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr); gap: clamp(2rem, 5vw, 4.5rem); align-items: center; padding-block: clamp(3rem, 7vw, 5.5rem) clamp(4rem, 8vw, 6.5rem); }
+.hero-text { display: grid; gap: 1.5rem; min-width: 0; }
+.eyebrow { display: inline-flex; flex-wrap: wrap; gap: 0.4rem 0.9rem; font-size: var(--step--1); letter-spacing: 0.08em; text-transform: uppercase; font-weight: 600; color: var(--deep-muted); }
+.eyebrow span + span::before { content: "·"; margin-right: 0.9rem; color: var(--beam); }
+.hero h1 { font-family: var(--font-display); font-weight: 500; font-size: var(--step-4); line-height: 1.02; letter-spacing: -0.015em; }
+.hero h1 em { font-style: italic; color: var(--beam); display: block; }
+.hero .lead { font-size: var(--step-1); line-height: 1.5; max-width: 46ch; color: var(--deep-muted); }
+.hero .lead strong { color: var(--deep-ink); font-weight: 600; }
+.hero-actions { display: flex; flex-wrap: wrap; gap: 0.75rem; }
+.hero-photo { position: relative; min-width: 0; }
+.hero-photo .frame { border-radius: 14px 14px 14px 120px; overflow: hidden; aspect-ratio: 4 / 4.6; max-width: 100%; box-shadow: 0 30px 60px -30px rgb(0 0 0 / 0.6); border: 1px solid color-mix(in srgb, var(--deep-ink) 15%, transparent); }
+.hero-photo img { width: 100%; height: 100%; object-fit: cover; object-position: 72% 40%; }
+.badge { position: absolute; left: -1.25rem; bottom: 1.5rem; background: var(--surface); color: var(--ink); border-radius: 12px; padding: 0.9rem 1.1rem; box-shadow: var(--shadow); display: grid; gap: 0.1rem; max-width: 15rem; }
+.badge .big { font-family: var(--font-display); font-size: 2.2rem; line-height: 1; font-weight: 600; color: var(--ink); }
+.badge .big small { font-size: 0.5em; color: var(--muted); font-family: var(--font-body); font-weight: 400; }
+.badge .stars { color: var(--gold); letter-spacing: 0.15em; font-size: 0.95rem; }
+.badge p:last-child { font-size: var(--step--1); color: var(--muted); line-height: 1.35; }
+.beam { position: absolute; left: 0; right: 0; bottom: 2.2rem; height: 2px; z-index: -1; background: linear-gradient(90deg, transparent 0%, var(--beam) 15%, var(--beam) 70%, transparent 100%); box-shadow: 0 0 22px 3px color-mix(in srgb, var(--beam) 50%, transparent); transform-origin: left; animation: beam 1.8s cubic-bezier(.2,.7,.2,1) both; }
+@keyframes beam { from { transform: scaleX(0.1); opacity: 0.3; } to { transform: scaleX(1); opacity: 1; } }
+
+/* Proof strip */
+.strip { background: var(--deep-2); color: var(--deep-ink); }
+.strip ul { list-style: none; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr)); }
+.strip li { display: flex; align-items: center; gap: 0.8rem; padding: 1.1rem 0; font-size: var(--step--1); color: var(--deep-muted); min-width: 0; }
+.strip li .ic { color: var(--beam); }
+.strip li strong { color: var(--deep-ink); display: block; font-size: var(--step-0); }
+
+/* Sections */
+main > section { padding-block: clamp(3.5rem, 8vw, 6rem); }
+.alt { background: var(--bg-alt); }
+.sec-head { display: grid; gap: 0.85rem; margin-bottom: clamp(2rem, 4vw, 3rem); max-width: var(--measure); }
+.sec-label { display: inline-flex; align-items: center; gap: 0.6rem; font-size: var(--step--1); letter-spacing: 0.1em; text-transform: uppercase; font-weight: 700; color: var(--gold); }
+.sec-label::before { content: ""; width: 1.75rem; height: 2px; background: currentColor; }
+h2 { font-family: var(--font-display); font-weight: 500; font-size: var(--step-3); line-height: 1.1; letter-spacing: -0.01em; }
+h2 em { font-style: italic; color: var(--gold); }
+h3 { font-size: var(--step-1); font-weight: 700; line-height: 1.3; }
+.sec-head p { color: var(--muted); font-size: var(--step-1); line-height: 1.5; }
+
+/* Numbers */
+.numbers { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(20rem, 100%), 1fr)); gap: 1.25rem; }
+.stat { background: var(--surface); border-radius: var(--radius); padding: clamp(1.4rem, 3vw, 2rem); box-shadow: var(--shadow); display: grid; gap: 1.1rem; align-content: start; min-width: 0; }
+.stat .num { font-family: var(--font-display); font-size: clamp(3rem, 7vw, 4.2rem); line-height: 0.95; font-weight: 600; font-variant-numeric: tabular-nums; }
+.stat .num small { font-size: 0.4em; color: var(--muted); font-family: var(--font-body); font-weight: 400; margin-left: 0.3rem; }
+.stat .src { font-size: var(--step--1); color: var(--muted); border-top: 1px solid var(--line); padding-top: 0.8rem; }
+.people { display: grid; grid-template-columns: repeat(10, 1fr); gap: 0.35rem; max-width: 22rem; }
+.people svg { width: 100%; height: auto; fill: color-mix(in srgb, var(--muted) 35%, transparent); }
+.people svg.on { fill: var(--gold); }
+.bars { display: grid; gap: 0.75rem; }
+.bar { display: grid; grid-template-columns: 7.5rem 1fr 3.4rem; align-items: center; gap: 0.75rem; font-size: var(--step--1); }
+.bar .track { display: block; height: 0.85rem; background: color-mix(in srgb, var(--muted) 15%, transparent); border-radius: 99px; overflow: hidden; }
+.bar .fill { display: block; height: 100%; border-radius: 99px; background: color-mix(in srgb, var(--muted) 55%, transparent); }
+.bar.hi .fill { background: var(--gold); }
+.bar .val { font-weight: 700; font-variant-numeric: tabular-nums; text-align: right; }
+.note { margin-top: 1.5rem; font-size: var(--step--1); color: var(--muted); max-width: var(--measure); }
+
+/* Iceberg */
+.berg { background: var(--deep); color: var(--deep-ink); }
+.berg .sec-label { color: var(--beam); }
+.berg h2 em { color: var(--beam); }
+.berg .sec-head p { color: var(--deep-muted); }
+.berg-grid { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr); gap: clamp(2rem, 5vw, 4rem); align-items: center; }
+.berg-art { min-width: 0; }
+.berg-art svg { width: 100%; height: auto; display: block; }
+.layers { list-style: none; margin: 0; padding: 0; display: grid; gap: 1rem; }
+.layers li { display: grid; gap: 0.4rem; padding: 1.1rem 1.25rem; border-radius: var(--radius); background: color-mix(in srgb, var(--deep-ink) 5%, transparent); border: 1px solid color-mix(in srgb, var(--deep-ink) 10%, transparent); min-width: 0; }
+.layers li .where { font-size: var(--step--1); color: var(--deep-muted); text-transform: uppercase; letter-spacing: 0.08em; font-weight: 600; }
+.layers li h3 { color: var(--deep-ink); }
+.layers li p { color: var(--deep-muted); }
+.layers li.key { border-color: var(--beam); background: color-mix(in srgb, var(--beam) 12%, transparent); }
+.layers li.key h3 { color: var(--beam); }
+.berg .note { color: var(--deep-muted); }
+
+/* Myths */
+.myths { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; align-items: start; }
+@media (max-width: 44rem) { .myths { grid-template-columns: 1fr; } }
+.myth { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; transition: box-shadow .2s ease; min-width: 0; }
+.myth:hover, .myth[open] { box-shadow: var(--shadow); }
+.myth summary { list-style: none; cursor: pointer; display: grid; grid-template-columns: 1fr auto; gap: 0.35rem 1rem; padding: 1.2rem 1.4rem; }
+.myth summary::-webkit-details-marker { display: none; }
+.myth summary:focus-visible { outline-offset: -3px; }
+.m-label, .f-label { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 700; }
+.m-label { color: var(--muted); }
+.m-text { grid-column: 1; font-family: var(--font-display); font-size: 1.3rem; line-height: 1.3; font-weight: 500; }
+.myth summary .ic { grid-column: 2; grid-row: 1 / span 2; align-self: center; color: var(--gold); width: 1.6rem; height: 1.6rem; transition: transform .2s ease; }
+.myth[open] summary .ic { transform: rotate(45deg); }
+.myth[open] .m-text { text-decoration: line-through; text-decoration-color: var(--gold); text-decoration-thickness: 2px; color: var(--muted); }
+.fact { display: grid; gap: 0.4rem; margin: 0 1.4rem; padding: 1rem 0 1.3rem; border-top: 1px solid var(--line); }
+.f-label { color: var(--gold); }
+.fact p { color: var(--ink); }
+
+/* Calculator */
+.calc { margin-top: 2rem; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); background: var(--surface); border-radius: 12px; box-shadow: var(--shadow); overflow: hidden; scroll-margin-top: 5.5rem; }
+.calc-in { padding: clamp(1.4rem, 3vw, 2.2rem); display: grid; gap: 1.1rem; align-content: start; }
+.calc-in > p { color: var(--muted); }
+.field { display: grid; gap: 0.4rem; }
+.field label { font-weight: 600; line-height: 1.35; }
+.field input { font: inherit; font-size: 1.2rem; font-variant-numeric: tabular-nums; padding: 0.65rem 0.9rem; border: 1.5px solid var(--line); border-radius: 6px; background: var(--bg); color: var(--ink); width: 100%; max-width: 12rem; }
+.field input:focus { border-color: var(--gold); }
+.calc-out { background: var(--deep); color: var(--deep-ink); padding: clamp(1.4rem, 3vw, 2.2rem); display: grid; gap: 1.1rem; align-content: start; }
+.calc-out .lbl { font-size: var(--step--1); text-transform: uppercase; letter-spacing: 0.1em; font-weight: 700; color: var(--deep-muted); }
+.calc-big { font-family: var(--font-display); font-size: clamp(2.3rem, 5vw, 3.2rem); line-height: 1; font-weight: 600; color: var(--beam); font-variant-numeric: tabular-nums; }
+.calc-rows { display: grid; margin: 0; }
+.calc-rows div { display: flex; justify-content: space-between; gap: 1rem; padding: 0.6rem 0; border-bottom: 1px solid color-mix(in srgb, var(--deep-ink) 12%, transparent); }
+.calc-rows dt { color: var(--deep-muted); }
+.calc-rows dd { margin: 0; font-weight: 700; font-variant-numeric: tabular-nums; text-align: right; white-space: nowrap; }
+.calc-save { padding: 1rem 1.2rem; border-radius: var(--radius); border: 1px solid var(--beam); background: color-mix(in srgb, var(--beam) 12%, transparent); }
+.calc-save strong { color: var(--beam); }
+.calc-note { font-size: 0.85rem; color: var(--deep-muted); }
+@media (max-width: 52rem) { .calc { grid-template-columns: 1fr; } }
+
+/* Tool tiles */
+.tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(15rem, 100%), 1fr)); gap: 1rem; list-style: none; margin: 0; padding: 0; }
+.tile { display: grid; gap: 0.6rem; align-content: start; padding: 1.4rem; border-radius: var(--radius); background: var(--surface); border: 1px solid var(--line); min-width: 0; transition: transform .2s ease, box-shadow .2s ease; }
+.tile:hover { transform: translateY(-2px); box-shadow: var(--shadow); }
+.tile .icon { width: 2.75rem; height: 2.75rem; border-radius: 50%; display: grid; place-items: center; background: color-mix(in srgb, var(--gold) 14%, transparent); color: var(--gold); }
+.tile p { color: var(--muted); }
+.sub { margin: clamp(2.5rem, 5vw, 3.5rem) 0 1.25rem; font-family: var(--font-display); font-size: var(--step-2); font-weight: 500; }
+
+/* Give / get */
+.exchange { display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); gap: 1.5rem; align-items: stretch; }
+.col { background: var(--surface); border-radius: var(--radius); padding: clamp(1.4rem, 3vw, 2rem); box-shadow: var(--shadow); display: grid; gap: 1.25rem; align-content: start; min-width: 0; }
+.col.gain { background: var(--deep); color: var(--deep-ink); }
+.col .head { font-size: var(--step--1); text-transform: uppercase; letter-spacing: 0.1em; font-weight: 700; color: var(--gold); }
+.col.gain .head { color: var(--beam); }
+.col ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 1.2rem; }
+.col li { display: grid; grid-template-columns: auto 1fr; gap: 0.2rem 0.9rem; }
+.col li .ic { grid-row: span 2; margin-top: 0.15rem; color: var(--gold); }
+.col.gain li .ic { color: var(--beam); }
+.col li span { color: var(--muted); }
+.col.gain li span { color: var(--deep-muted); }
+.arrow { display: grid; place-items: center; color: var(--gold); }
+.arrow .ic { width: 2.25rem; height: 2.25rem; }
+@media (max-width: 52rem) { .exchange { grid-template-columns: 1fr; } .arrow { transform: rotate(90deg); } }
+
+/* Steps */
+.steps { list-style: none; padding: 0; margin: 0; counter-reset: s; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(12.5rem, 100%), 1fr)); gap: 1rem; }
+.steps li { counter-increment: s; display: grid; gap: 0.6rem; align-content: start; padding: 1.4rem 1.25rem; border-top: 3px solid var(--gold); background: var(--surface); border-radius: 0 0 var(--radius) var(--radius); min-width: 0; }
+.steps li::before { content: "Krok " counter(s); font-size: var(--step--1); text-transform: uppercase; letter-spacing: 0.1em; font-weight: 700; color: var(--gold); }
+.steps li strong { font-size: 1.1rem; line-height: 1.35; }
+.steps li span { color: var(--muted); font-size: 0.98rem; }
+
+/* Law */
+.law { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(16rem, 100%), 1fr)); gap: 1.25rem; }
+.law-card { display: grid; gap: 0.75rem; align-content: start; padding: clamp(1.4rem, 3vw, 2rem); background: var(--surface); border-radius: var(--radius); box-shadow: var(--shadow); min-width: 0; }
+.law-card .num { font-family: var(--font-display); font-size: clamp(2.6rem, 6vw, 3.8rem); line-height: 1; color: var(--gold); font-weight: 600; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.law-card .num small { font-size: 0.42em; }
+.law-card p { color: var(--muted); }
+.callout { margin-top: 1.5rem; display: flex; gap: 1rem; align-items: flex-start; padding: 1.25rem 1.5rem; border-radius: var(--radius); border: 1px dashed var(--line); max-width: 52rem; }
+.callout .ic { color: var(--gold); margin-top: 0.2rem; }
+.callout p { color: var(--muted); min-width: 0; }
+
+/* Organisations */
+.orgs { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(19rem, 100%), 1fr)); gap: 1rem; list-style: none; padding: 0; margin: 0; }
+.org { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 1.4rem; display: grid; gap: 0.6rem; grid-template-rows: auto auto 1fr auto; min-width: 0; transition: box-shadow .2s ease, transform .2s ease; }
+.org:hover { box-shadow: var(--shadow); transform: translateY(-2px); }
+.tag { justify-self: start; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.04em; padding: 0.2rem 0.6rem; border-radius: 99px; background: color-mix(in srgb, var(--gold) 13%, transparent); color: var(--gold); }
+.org p { color: var(--muted); }
+.org a { display: inline-flex; align-items: center; gap: 0.4rem; font-weight: 700; justify-self: start; }
+.org a .ic { width: 1rem; height: 1rem; stroke-width: 2.2; }
+
+/* Offer */
+.offers { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(16rem, 100%), 1fr)); gap: 1.25rem; list-style: none; padding: 0; margin: 0; }
+.offer { display: grid; gap: 0.8rem; align-content: start; grid-template-rows: auto auto auto 1fr auto; padding: 1.6rem; background: var(--surface); border-radius: var(--radius); box-shadow: var(--shadow); min-width: 0; border-top: 4px solid var(--beam); }
+.offer .icon { width: 3rem; height: 3rem; border-radius: 12px; display: grid; place-items: center; background: var(--deep); color: var(--beam); }
+.offer .for { font-size: var(--step--1); color: var(--gold); font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; }
+.offer p { color: var(--muted); }
+.offer a { display: inline-flex; align-items: center; gap: 0.4rem; font-weight: 700; justify-self: start; }
+.offer a .ic { width: 1rem; height: 1rem; stroke-width: 2.2; }
+.about { margin-top: clamp(2.5rem, 5vw, 4rem); display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 1.5rem 3.5rem; align-items: center; }
+.about blockquote p { font-family: var(--font-display); font-size: clamp(1.6rem, 3.2vw, 2.3rem); line-height: 1.25; font-style: italic; }
+.about blockquote footer { margin-top: 0.8rem; font-size: var(--step--1); color: var(--muted); }
+.about .prose { display: grid; gap: 1rem; color: var(--muted); }
+@media (max-width: 52rem) { .about { grid-template-columns: 1fr; } }
+
+/* Closing contact */
+.contact { background: var(--deep); color: var(--deep-ink); position: relative; overflow: hidden; isolation: isolate; }
+.contact::before { content: ""; position: absolute; inset: 0; z-index: -1; background: radial-gradient(50rem 25rem at 50% 120%, color-mix(in srgb, var(--beam) 18%, transparent), transparent 70%); }
+.contact .wrap { display: grid; gap: 1.5rem; justify-items: center; text-align: center; }
+.contact .sec-label { color: var(--beam); }
+.contact h2 { font-size: clamp(2.4rem, 6vw, 4rem); }
+.contact h2 em { color: var(--beam); }
+.contact .lead { color: var(--deep-muted); font-size: var(--step-1); max-width: 44ch; }
+.contact-card { display: grid; gap: 1rem; justify-items: center; background: color-mix(in srgb, var(--deep-ink) 6%, transparent); border: 1px solid color-mix(in srgb, var(--deep-ink) 14%, transparent); border-radius: 14px; padding: 1.75rem clamp(1.25rem, 4vw, 2.5rem); max-width: 100%; margin-top: 0.5rem; }
+.contact-card .email { font-size: clamp(1.2rem, 3.5vw, 1.7rem); color: var(--deep-ink); font-weight: 700; user-select: all; overflow-wrap: anywhere; text-decoration: none; }
+.contact-card .email:hover { color: var(--beam); }
+.contact-actions { display: flex; flex-wrap: wrap; gap: 0.75rem; justify-content: center; }
+.copy { font: inherit; font-weight: 700; cursor: pointer; background: transparent; color: var(--deep-ink); border: 1.5px solid color-mix(in srgb, var(--deep-ink) 40%, transparent); padding: 0.8rem 1.25rem; border-radius: 999px; display: inline-flex; align-items: center; gap: 0.5rem; line-height: 1.2; }
+.copy:hover { border-color: var(--deep-ink); }
+.copy .ic { width: 1.15rem; height: 1.15rem; }
+.copy-status { font-size: var(--step--1); color: var(--beam); min-height: 1.3em; }
+
+/* Footer */
+.site-foot { padding-block: 2rem 2.5rem; color: var(--muted); font-size: var(--step--1); }
+.site-foot .wrap { display: flex; flex-wrap: wrap; gap: 0.75rem 2rem; justify-content: space-between; align-items: center; }
+.braille { font-size: 1.6rem; letter-spacing: 0.3em; color: var(--gold); line-height: 1; }
+
+@media (max-width: 60rem) {
+  .hero .wrap, .berg-grid { grid-template-columns: 1fr; }
+  .hero-photo { max-width: 26rem; justify-self: center; width: 100%; }
+  .badge { left: auto; right: -0.5rem; bottom: -1rem; }
+  .nav { display: none; }
+  .site-head .wrap { justify-content: space-between; }
+}
+@media (max-width: 30rem) {
+  .bar { grid-template-columns: 6rem 1fr 3.2rem; }
+  .badge { right: 0; }
+}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="i-voice" viewBox="0 0 24 24"><path d="M4 9v6h4l5 4V5L8 9H4z"/><path d="M16.5 8.5a5 5 0 0 1 0 7M19 6a8.5 8.5 0 0 1 0 12"/></symbol>
+  <symbol id="i-braille" viewBox="0 0 24 24"><circle cx="9" cy="6" r="1.8" fill="currentColor"/><circle cx="15" cy="6" r="1.8"/><circle cx="9" cy="12" r="1.8" fill="currentColor"/><circle cx="15" cy="12" r="1.8" fill="currentColor"/><circle cx="9" cy="18" r="1.8"/><circle cx="15" cy="18" r="1.8" fill="currentColor"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><rect x="7" y="2.5" width="10" height="19" rx="2.5"/><path d="M11 18.5h2"/></symbol>
+  <symbol id="i-spark" viewBox="0 0 24 24"><path d="M11 3l1.8 5.2L18 10l-5.2 1.8L11 17l-1.8-5.2L4 10l5.2-1.8z"/><path d="M19 14.5l.8 2.2 2.2.8-2.2.8-.8 2.2-.8-2.2-2.2-.8 2.2-.8z"/></symbol>
+  <symbol id="i-doc" viewBox="0 0 24 24"><path d="M6 3h9l4 4v14H6z"/><path d="M14.5 3v4.5H19M9 11h7M9 14.5h7M9 18h4"/></symbol>
+  <symbol id="i-screen" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="12" rx="1.5"/><path d="M8 20h8M12 16v4"/></symbol>
+  <symbol id="i-keyboard" viewBox="0 0 24 24"><rect x="2.5" y="6" width="19" height="12" rx="2"/><path d="M6.5 10h.01M10 10h.01M14 10h.01M17.5 10h.01M7.5 14h9"/></symbol>
+  <symbol id="i-ask" viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"/><path d="M10 9.3a2 2 0 1 1 2.6 1.9c-.4.2-.6.5-.6.9v.3M12 14.2h.01"/></symbol>
+  <symbol id="i-headset" viewBox="0 0 24 24"><path d="M4 15v-3a8 8 0 0 1 16 0v3"/><rect x="3" y="14" width="4" height="6" rx="1.2"/><rect x="17" y="14" width="4" height="6" rx="1.2"/></symbol>
+  <symbol id="i-buddy" viewBox="0 0 24 24"><circle cx="8.5" cy="8" r="3"/><circle cx="16.5" cy="9" r="2.5"/><path d="M3 20c0-3.3 2.5-5.5 5.5-5.5S14 16.7 14 20M14.5 14.6c3 .1 5.5 2 5.5 5.4"/></symbol>
+  <symbol id="i-flag" viewBox="0 0 24 24"><path d="M5 21V4M5 4h12l-2.5 4L17 12H5"/></symbol>
+  <symbol id="i-compass" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2 5-5 2 2-5z"/></symbol>
+  <symbol id="i-talk" viewBox="0 0 24 24"><path d="M3 5h12v8H8l-5 3.5z"/><path d="M15 9h6v8l-3-2h-6v-2"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.7 2.7L16.5 9"/></symbol>
+  <symbol id="i-case" viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5h6v2M3 12.5h18"/></symbol>
+  <symbol id="i-play" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="12" rx="1.5"/><path d="M10.5 7.5v5l4-2.5zM8 20h8"/></symbol>
+  <symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.2" fill="currentColor"/></symbol>
+  <symbol id="i-path" viewBox="0 0 24 24"><circle cx="6" cy="18" r="2"/><circle cx="18" cy="6" r="2"/><path d="M8 18h5a3 3 0 0 0 0-6h-2a3 3 0 0 1 0-6h5"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9.5"/><path d="M12 8v8M8 12h8"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-out" viewBox="0 0 24 24"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3.5 6.5l8.5 6 8.5-6"/></symbol>
+  <symbol id="i-copy" viewBox="0 0 24 24"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V5a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h3"/></symbol>
+  <symbol id="i-in" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 10.5V16M8 8v.01M11.5 16v-5.5M11.5 13c0-1.5 1-2.5 2.3-2.5S16 11.3 16 13v3"/></symbol>
+  <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/></symbol>
+  <symbol id="i-mic" viewBox="0 0 24 24"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5.5 11a6.5 6.5 0 0 0 13 0M12 17.5V21"/></symbol>
+  <symbol id="i-person" viewBox="0 0 24 30"><circle cx="12" cy="6" r="4.6"/><path d="M4 29v-9.5A7.5 7.5 0 0 1 11.5 12h1A7.5 7.5 0 0 1 20 19.5V29z"/></symbol>
+</svg>
+
+<a class="skip" href="#obsah">Přeskočit na obsah</a>
+
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="#uvod"><span class="brand-mark" aria-hidden="true"><i class="on"></i><i></i><i class="on"></i><i class="on"></i><i></i><i class="on"></i></span>Práce bez zraku</a>
+    <nav class="nav" aria-label="Hlavní navigace">
+      <ul>
+        <li><a href="#myty">Mýty</a></li>
+        <li><a href="#jak-pracujeme">Jak pracujeme</a></li>
+        <li><a href="#nabor">Nábor</a></li>
+        <li><a href="#zakon">Zákon</a></li>
+        <li><a href="#kam-se-obratit">Kam se obrátit</a></li>
+        <li><a href="#co-nabizim">Co nabízím</a></li>
+      </ul>
+    </nav>
+    <a class="btn btn-gold head-cta" href="#kontakt">Kontakt</a>
+  </div>
+</header>
+
+<div class="hero" id="uvod">
+  <div class="wrap">
+    <div class="hero-text">
+      <p class="eyebrow"><span>HRko 2026</span><span>Ostrava</span><span>15. 10. 2026</span></p>
+      <h1>Nevidomý kolega? <em>Začněte tady.</em></h1>
+      <p class="lead">Průvodce pro HR a manažery: <strong>jak zaměstnat nevidomého nebo slabozrakého kolegu</strong>, co k tomu firma potřebuje a kde začít.</p>
+      <div class="hero-actions">
+        <a class="btn btn-gold" href="#kontakt">Domluvit spolupráci <svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        <a class="btn btn-ghost" href="#myty">Jak začít</a>
+      </div>
+    </div>
+    <div class="hero-photo">
+      <div class="frame">
+        <img src="img/josef.jpg" width="824" height="768" alt="Josef Sarkány se usmívá a rukou se dotýká stěny polepené barevnými lepíky z týmového workshopu.">
+      </div>
+    </div>
+  </div>
+  <div class="beam" aria-hidden="true"></div>
+</div>
+
+<div class="strip">
+  <ul class="wrap">
+    <li><svg class="ic" aria-hidden="true"><use href="#i-target"/></svg><span><strong>Agilní kouč</strong>v bankovnictví</span></li>
+    <li><svg class="ic" aria-hidden="true"><use href="#i-headset"/></svg><span><strong>Pracuji s odečítačem</strong>JAWS, klávesnice, AI</span></li>
+    <li><svg class="ic" aria-hidden="true"><use href="#i-buddy"/></svg><span><strong>Scrum master a PM</strong>v e-commerce i bankách</span></li>
+    <li><svg class="ic" aria-hidden="true"><use href="#i-mic"/></svg><span><strong>Řečník HRko 2026</strong>OKbase Festival stage</span></li>
+  </ul>
+</div>
+
+<main id="obsah">
+
+
+
+
+  <section id="myty" aria-labelledby="myty-h">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="sec-label">Mýty a fakta</p>
+        <h2 id="myty-h">Osm obav, <em>které se v praxi nepotvrdily</em></h2>
+        <p>Rozbalte mýtus a uvidíte, jak to vypadá ve skutečnosti.</p>
+      </div>
+      <div class="myths">
+        <details class="myth">
+          <summary><span class="m-label">Mýtus</span><span class="m-text">Nevidomý nezvládne práci s počítačem.</span><svg class="ic" aria-hidden="true"><use href="#i-plus"/></svg></summary>
+          <div class="fact"><span class="f-label">Fakt</span><p>S odečítačem obrazovky pracuji s e-mailem, dokumenty, tabulkami, Teams i firemními systémy. Rozhoduje, jestli jsou nástroje přístupné, ne jestli vidím.</p></div>
+        </details>
+        <details class="myth">
+          <summary><span class="m-label">Mýtus</span><span class="m-text">Přizpůsobit pracoviště stojí spoustu peněz.</span><svg class="ic" aria-hidden="true"><use href="#i-plus"/></svg></summary>
+          <div class="fact"><span class="f-label">Fakt</span><p>Odečítač NVDA je zdarma a často stačí vlastní zařízení zaměstnance. Na vybavení pracovního místa může přispět Úřad práce.</p></div>
+        </details>
+        <details class="myth">
+          <summary><span class="m-label">Mýtus</span><span class="m-text">Nevidomý kolega potřebuje neustálou pomoc.</span><svg class="ic" aria-hidden="true"><use href="#i-plus"/></svg></summary>
+          <div class="fact"><span class="f-label">Fakt</span><p>Pomoc je potřeba hlavně na začátku: orientace v budově a v systémech. Pak stačí běžná týmová spolupráce. Přehnaná péče spíš vadí.</p></div>
+        </details>
+        <details class="myth">
+          <summary><span class="m-label">Mýtus</span><span class="m-text">Před nevidomým nesmím říct „vidět“ nebo „podívej se“.</span><svg class="ic" aria-hidden="true"><use href="#i-plus"/></svg></summary>
+          <div class="fact"><span class="f-label">Fakt</span><p>Klidně to říkejte, nevidomí ta slova používají taky. Opatrné vyhýbání se slovům vytváří víc napětí než přirozený rozhovor.</p></div>
+        </details>
+        <details class="myth">
+          <summary><span class="m-label">Mýtus</span><span class="m-text">Workshopy s tabulí a lepíky ho vyřadí.</span><svg class="ic" aria-hidden="true"><use href="#i-plus"/></svg></summary>
+          <div class="fact"><span class="f-label">Fakt</span><p>Stačí nahlas popsat, co je na tabuli, nebo se domluvit, kdo zapisuje. Workshopy sám facilituji. Tým se přitom naučí komunikovat jasněji.</p></div>
+        </details>
+        <details class="myth">
+          <summary><span class="m-label">Mýtus</span><span class="m-text">Nevidomý nemůže vést lidi ani schůzky.</span><svg class="ic" aria-hidden="true"><use href="#i-plus"/></svg></summary>
+          <div class="fact"><span class="f-label">Fakt</span><p>Pracuji jako scrum master a agilní kouč a koučuji lídry. Vedení stojí na naslouchání a struktuře, ne na zraku.</p></div>
+        </details>
+        <details class="myth">
+          <summary><span class="m-label">Mýtus</span><span class="m-text">Potřebuje speciálně upravenou kancelář.</span><svg class="ic" aria-hidden="true"><use href="#i-plus"/></svg></summary>
+          <div class="fact"><span class="f-label">Fakt</span><p>Obvykle stačí běžné pracovní místo a sluchátka. Důležitější je popsat cestu po budově a nepřesouvat věci bez upozornění.</p></div>
+        </details>
+        <details class="myth">
+          <summary><span class="m-label">Mýtus</span><span class="m-text">Zaměstnat člověka s postižením je hlavně náklad.</span><svg class="ic" aria-hidden="true"><use href="#i-plus"/></svg></summary>
+          <div class="fact"><span class="f-label">Fakt</span><p>Zaměstnanec s invaliditou třetího stupně se do povinného podílu počítá třikrát a firma si sníží daň o 60 000 Kč ročně. <a href="#kalkulacka">Spočítejte si to v kalkulačce.</a></p></div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section id="jak-pracujeme" class="alt" aria-labelledby="jak-h">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="sec-label">Jak pracujeme</p>
+        <h2 id="jak-h">Klávesnice, sluch a hmat. <em>Výsledek je stejný.</em></h2>
+        <p>Obrazovku mi předčítá program a myš nahrazují klávesové zkratky. E-mail, dokumenty, tabulky i online schůzky zvládám jako ostatní, jen jinou cestou.</p>
+      </div>
+      <ul class="tiles">
+        <li class="tile"><span class="icon"><svg class="ic" aria-hidden="true"><use href="#i-voice"/></svg></span><h3>Odečítač obrazovky</h3><p>Program, který čte text z obrazovky hlasem, například JAWS nebo NVDA. NVDA je zdarma, JAWS je placený.</p></li>
+        <li class="tile"><span class="icon"><svg class="ic" aria-hidden="true"><use href="#i-braille"/></svg></span><h3>Braillský řádek</h3><p>Zařízení pod klávesnicí, které zobrazuje text hmatovým písmem. Hodí se pro přesnou práci s textem a čísly.</p></li>
+        <li class="tile"><span class="icon"><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg></span><h3>Telefon s hlasem</h3><p>iPhone i Android mají odečítač zabudovaný. Jmenuje se VoiceOver, respektive TalkBack.</p></li>
+        <li class="tile"><span class="icon"><svg class="ic" aria-hidden="true"><use href="#i-spark"/></svg></span><h3>Umělá inteligence</h3><p>Aplikace jako Be My Eyes popíšou fotografii, graf nebo dokument. Technologie, které nevidomí zkoušejí jako první, dnes pomáhají všem.</p></li>
+      </ul>
+      <h3 class="sub">Co pomůže celému týmu</h3>
+      <ul class="tiles">
+        <li class="tile"><span class="icon"><svg class="ic" aria-hidden="true"><use href="#i-doc"/></svg></span><h3>Dokumenty se strukturou</h3><p>Skutečné nadpisy, seznamy a popisky obrázků. Odečítač podle nich v dokumentu naviguje.</p></li>
+        <li class="tile"><span class="icon"><svg class="ic" aria-hidden="true"><use href="#i-screen"/></svg></span><h3>Sdílená obrazovka nahlas</h3><p>Na schůzce stačí říct, co ukazujete: „Teď jsem v tabulce, řádek s rozpočtem.“</p></li>
+        <li class="tile"><span class="icon"><svg class="ic" aria-hidden="true"><use href="#i-keyboard"/></svg></span><h3>Přístupné interní systémy</h3><p>Docházka, intranet a firemní aplikace by měly jít ovládat klávesnicí. Ověřit to může odborník na přístupnost.</p></li>
+        <li class="tile"><span class="icon"><svg class="ic" aria-hidden="true"><use href="#i-ask"/></svg></span><h3>Přímá otázka</h3><p>„Jak ti to mám poslat, aby se ti s tím dobře pracovalo?“ Odpověď vás většinou překvapí jednoduchostí.</p></li>
+      </ul>
+    </div>
+  </section>
+
+
+  <section id="nabor" class="alt" aria-labelledby="nabor-h">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="sec-label">Nábor</p>
+        <h2 id="nabor-h">Pět kroků k náboru, kterým projde i nevidomý kandidát</h2>
+        <p>Většina bariér vzniká dřív, než se s kandidátem vůbec potkáte.</p>
+      </div>
+      <ol class="steps">
+        <li><strong>Projděte formulář bez myši</strong><span>Když nejde vyplnit jen klávesnicí nebo obsahuje obrázkovou kontrolu „nejsem robot“, část kandidátů odpadne hned na začátku.</span></li>
+        <li><strong>Ověřte online testy</strong><span>Časově omezené a obrázkové testy jsou pro odečítač často nepřístupné. Domluvte náhradní formu nebo delší čas.</span></li>
+        <li><strong>Zeptejte se, co kandidát potřebuje</strong><span>Popis cesty od zastávky, kdo ho vyzvedne na recepci, podklady předem v textové podobě.</span></li>
+        <li><strong>Ptejte se na práci, ne na diagnózu</strong><span>„Jak byste řešil tento úkol?“ řekne víc než „Co přesně vidíte?“ Na nástroje se klidně zeptejte.</span></li>
+        <li><strong>Nebojte se slova „vidět“</strong><span>„Uvidíme se příští týden“ říkají nevidomí taky. Přirozený rozhovor je lepší než opatrnost.</span></li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="zakon" aria-labelledby="zakon-h">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="sec-label">Zákon a podpora</p>
+        <h2 id="zakon-h">Vyplatí se to <em>i podle zákona</em></h2>
+      </div>
+      <div class="law">
+        <div class="law-card">
+          <p class="num">4 %</p>
+          <h3>Povinný podíl</h3>
+          <p>Zaměstnavatel s více než 25 zaměstnanci musí zaměstnávat lidi se zdravotním postižením ve výši 4 % zaměstnanců. Jinak plní povinnost odběrem výrobků a služeb (náhradní plnění) nebo odvodem do státního rozpočtu.</p>
+        </div>
+        <div class="law-card">
+          <p class="num">3×</p>
+          <h3>Započtení do podílu</h3>
+          <p>Zaměstnanec s těžším zdravotním postižením, tedy s invaliditou třetího stupně, se do povinného podílu započítává třikrát. Většina prakticky nevidomých lidí do této skupiny patří.</p>
+        </div>
+        <div class="law-card">
+          <p class="num">60 000 <small>Kč</small></p>
+          <h3>Sleva na dani ročně</h3>
+          <p>Za zaměstnance s těžším zdravotním postižením, za ostatní zaměstnance se zdravotním postižením 18 000 Kč. Počítá se přepočtený počet podle odpracovaných hodin (§ 35 zákona o daních z příjmů).</p>
+        </div>
+      </div>
+      <div class="calc" id="kalkulacka">
+        <form class="calc-in" id="calc-form" novalidate>
+          <h3>Kalkulačka pro vaši firmu</h3>
+          <p>Zadejte údaje a uvidíte, kolik vás stojí neplnění povinného podílu a co by změnil jeden nevidomý kolega.</p>
+          <div class="field">
+            <label for="c-n">Průměrný přepočtený počet zaměstnanců</label>
+            <input id="c-n" type="number" inputmode="numeric" min="0" step="1" value="200">
+          </div>
+          <div class="field">
+            <label for="c-l">Z toho lidé se zdravotním postižením (invalidita 1. nebo 2. stupně, zdravotně znevýhodnění)</label>
+            <input id="c-l" type="number" inputmode="numeric" min="0" step="1" value="2">
+          </div>
+          <div class="field">
+            <label for="c-h">Z toho lidé s těžším zdravotním postižením (invalidita 3. stupně)</label>
+            <input id="c-h" type="number" inputmode="numeric" min="0" step="1" value="0">
+          </div>
+        </form>
+        <div class="calc-out">
+          <div>
+            <p class="lbl">Odvod do státního rozpočtu ročně</p>
+            <p class="calc-big" id="r-odvod">0 Kč</p>
+          </div>
+          <dl class="calc-rows">
+            <div><dt>Povinný podíl (4 %)</dt><dd id="r-need">0 osob</dd></div>
+            <div><dt>Započítáno</dt><dd id="r-have">0 osob</dd></div>
+            <div><dt>Chybí</dt><dd id="r-miss">0 osob</dd></div>
+            <div><dt>Sleva na dani ročně</dt><dd id="r-tax">0 Kč</dd></div>
+          </dl>
+          <p class="calc-save" id="r-save" role="status" aria-live="polite"></p>
+          <p class="calc-note">Orientační výpočet podle pravidel pro ohlášení za rok 2025: průměrná mzda 48 171 Kč, odvod 1násobek při podílu aspoň 3 %, 2násobek při 1 až 3 %, 3,5násobek pod 1 %. Odvod lze nahradit odběrem výrobků a služeb (náhradní plnění, 337 197 Kč na chybějící osobu).</p>
+        </div>
+      </div>
+      <div class="callout">
+        <svg class="ic" aria-hidden="true"><use href="#i-info"/></svg>
+        <p>Úřad práce ČR může přispět na zřízení chráněného pracovního místa a na jeho provoz. Aktuální pravidla a výpočty najdete na webu <a href="https://karierabezbarier.cz/zakonna-povinnost/">Kariéra bez bariér</a> Ministerstva práce a sociálních věcí. Údaje jsou informativní, stav k říjnu 2026, a nenahrazují právní ani daňovou radu.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="kam-se-obratit" class="alt" aria-labelledby="org-h">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="sec-label">Kam se obrátit</p>
+        <h2 id="org-h">Neziskové organizace, které vám poradí</h2>
+        <p>Odkazy vedou přímo na jejich kontaktní stránky.</p>
+      </div>
+      <ul class="orgs">
+        <li class="org">
+          <span class="tag">Poradenství</span>
+          <h3>SONS ČR</h3>
+          <p>Sjednocená organizace nevidomých a slabozrakých, největší organizace zrakově postižených. Sociálně-právní a pracovně-právní poradenství, nabídky práce.</p>
+          <a href="https://www.sons.cz/kontakty">Kontakty SONS ČR <svg class="ic" aria-hidden="true"><use href="#i-out"/></svg></a>
+        </li>
+        <li class="org">
+          <span class="tag">Přístupnost</span>
+          <h3>Blind Friendly Web</h3>
+          <p>Projekt TyfloCentra Brno. Testuje přístupnost webů, aplikací a dokumentů a radí, jak je opravit. Ideální pro kontrolu náborových formulářů a interních systémů.</p>
+          <a href="https://www.centrumpronevidome.cz/blindfriendly/kontakt">Kontakt Blind Friendly Web <svg class="ic" aria-hidden="true"><use href="#i-out"/></svg></a>
+        </li>
+        <li class="org">
+          <span class="tag">Celá ČR</span>
+          <h3>Tyfloservis</h3>
+          <p>Krajská střediska, která učí lidi se zrakovým postižením samostatnosti: prostorovou orientaci, Braillovo písmo, práci s pomůckami.</p>
+          <a href="https://www.tyfloservis.cz/krajska-strediska/">Kontakty krajských středisek <svg class="ic" aria-hidden="true"><use href="#i-out"/></svg></a>
+        </li>
+        <li class="org">
+          <span class="tag">Kraje</span>
+          <h3>TyfloCentra</h3>
+          <p>Sociální služby pro nevidomé a slabozraké v jednotlivých krajích, včetně kurzů práce s počítačem. Na rozcestníku najdete centrum ve svém kraji.</p>
+          <a href="https://www.tyflocentrum.cz/">Rozcestník krajských TyfloCenter <svg class="ic" aria-hidden="true"><use href="#i-out"/></svg></a>
+        </li>
+        <li class="org">
+          <span class="tag">Moravskoslezský kraj</span>
+          <h3>TyfloCentrum Ostrava</h3>
+          <p>Registrované sociální služby pro lidi se zrakovým postižením v regionu, kde se koná HRko 2026.</p>
+          <a href="https://www.tyflocentrum-ova.cz/kontakty/">Kontakty TyfloCentra Ostrava <svg class="ic" aria-hidden="true"><use href="#i-out"/></svg></a>
+        </li>
+        <li class="org">
+          <span class="tag">Praha</span>
+          <h3>Okamžik</h3>
+          <p>Poradenské centrum, dobrovolnické centrum a aktivity pro lidi se zrakovým postižením.</p>
+          <a href="https://www.okamzik.cz/kontakty/">Kontakty Okamžik <svg class="ic" aria-hidden="true"><use href="#i-out"/></svg></a>
+        </li>
+        <li class="org">
+          <span class="tag">Poradny v krajích</span>
+          <h3>NRZP ČR</h3>
+          <p>Národní rada osob se zdravotním postižením. Bezplatné sociální poradenství pro lidi se zdravotním postižením a jejich okolí.</p>
+          <a href="https://nrzp.cz/kontakty/">Kontakty NRZP ČR <svg class="ic" aria-hidden="true"><use href="#i-out"/></svg></a>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="co-nabizim" aria-labelledby="nabizim-h">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="sec-label">Co nabízím</p>
+        <h2 id="nabizim-h">Pomůžu vám udělat <em>první krok</em></h2>
+        <p>Jsem prakticky nevidomý agilní kouč v bankovnictví. Znám obě strany: jako kandidát i jako člověk, který vede týmy.</p>
+      </div>
+      <ul class="offers">
+        <li class="offer">
+          <span class="icon"><svg class="ic" aria-hidden="true"><use href="#i-case"/></svg></span>
+          <p class="for">Pro HR a vedení</p>
+          <h3>Konzultace o zaměstnávání</h3>
+          <p>Projdeme váš nábor, pracovní prostředí a interní systémy. Dostanete konkrétní doporučení, co změnit a kde začít.</p>
+          <a href="mailto:sarkany.josef@gmail.com?subject=Konzultace%20o%20zam%C4%9Bstn%C3%A1v%C3%A1n%C3%AD">Mám zájem o konzultaci <svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        </li>
+        <li class="offer">
+          <span class="icon"><svg class="ic" aria-hidden="true"><use href="#i-play"/></svg></span>
+          <p class="for">Pro týmy</p>
+          <h3>Živá ukázka práce</h3>
+          <p>Ukážu, jak pracuji s odečítačem obrazovky a umělou inteligencí. Zaměstnanci si vyzkoušejí, jak web nebo dokument „slyší“ nevidomý kolega.</p>
+          <a href="mailto:sarkany.josef@gmail.com?subject=%C5%BDiv%C3%A1%20uk%C3%A1zka%20pr%C3%A1ce">Mám zájem o ukázku <svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        </li>
+        <li class="offer">
+          <span class="icon"><svg class="ic" aria-hidden="true"><use href="#i-target"/></svg></span>
+          <p class="for">Pro lídry a jednotlivce</p>
+          <h3>Osobní a profesní koučink</h3>
+          <p>Koučink pro lídry, manažery a členy týmů. Pracuji s outcome přístupem a principy průběžného discovery podle Teresy Torres.</p>
+          <a href="mailto:sarkany.josef@gmail.com?subject=Kou%C4%8Dink">Mám zájem o koučink <svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        </li>
+        <li class="offer">
+          <span class="icon"><svg class="ic" aria-hidden="true"><use href="#i-path"/></svg></span>
+          <p class="for">Pro nevidomé a jejich manažery</p>
+          <h3>Mentoring</h3>
+          <p>Podpora lidem se zrakovým postižením, kteří hledají práci nebo začínají v nové roli. A manažerům, kteří takového kolegu vedou poprvé.</p>
+          <a href="mailto:sarkany.josef@gmail.com?subject=Mentoring">Mám zájem o mentoring <svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        </li>
+      </ul>
+      <div class="about">
+        <blockquote>
+          <p>„Kdo chce, hledá způsob. Kdo nechce, hledá důvod.“</p>
+          <footer>Oblíbené rčení</footer>
+        </blockquote>
+        <div class="prose">
+          <p>Zrak jsem ztrácel postupně od dětství. Vystudoval jsem VŠE, prošel e-commerce i bankovnictví jako scrum master a projektový manažer a dnes pracuji jako agilní kouč. Mezitím jsem závodil v atletice a reprezentoval v goalballu.</p>
+          <p>Cenu a formu spolupráce domluvíme podle toho, co potřebujete.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="kontakt" class="contact" aria-labelledby="kontakt-h">
+    <div class="wrap">
+      <p class="sec-label">Kontakt</p>
+      <h2 id="kontakt-h">Co je <em>váš první krok?</em></h2>
+      <p class="lead">Může to být jen jeden e-mail. Napište mi, co řešíte, a domluvíme se, jak vám můžu pomoct.</p>
+      <div class="contact-card">
+        <a class="email" id="email" href="mailto:sarkany.josef@gmail.com">sarkany.josef@gmail.com</a>
+        <div class="contact-actions">
+          <a class="btn btn-gold" href="mailto:sarkany.josef@gmail.com"><svg class="ic" aria-hidden="true"><use href="#i-mail"/></svg>Napsat e-mail</a>
+          <button class="copy" id="copy-email" type="button"><svg class="ic" aria-hidden="true"><use href="#i-copy"/></svg>Zkopírovat adresu</button>
+          <a class="btn btn-ghost" href="https://www.linkedin.com/in/josef-sark%C3%A1ny-570a09b2/"><svg class="ic" aria-hidden="true"><use href="#i-in"/></svg>LinkedIn</a>
+        </div>
+        <p class="copy-status" id="copy-status" role="status" aria-live="polite"></p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <p>Josef Sarkány · Podklady k přednášce na konferenci HRko 2026, Ostrava · Stránka vznikla s pomocí AI (Claude) · Říjen 2026</p>
+    <p class="braille" aria-hidden="true" title="JOSEF v Braillově písmu">⠚⠕⠎⠑⠋</p>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var btn = document.getElementById('copy-email');
+  var status = document.getElementById('copy-status');
+  var email = 'sarkany.josef@gmail.com';
+  var failMsg = 'Kopírování se nepovedlo. Adresa je označená, zkopírujte ji klávesami Ctrl+C.';
+  function selectEmail() {
+    try {
+      var range = document.createRange();
+      range.selectNodeContents(document.getElementById('email'));
+      var sel = window.getSelection();
+      sel.removeAllRanges();
+      sel.addRange(range);
+    } catch (e) {}
+  }
+  btn.addEventListener('click', function () {
+    try {
+      navigator.clipboard.writeText(email).then(function () {
+        status.textContent = 'Adresa je zkopírovaná ve schránce.';
+      }, function () { selectEmail(); status.textContent = failMsg; });
+    } catch (e) { selectEmail(); status.textContent = failMsg; }
+  });
+})();
+
+/* Kalkulacka povinneho podilu (pravidla pro ohlaseni za rok 2025) */
+var PODIL = {
+  mzda: 48171,
+  slevaZP: 18000,
+  slevaTZP: 60000,
+  koeficient: function (procent) { return procent >= 3 ? 1 : procent >= 1 ? 2 : 3.5; },
+  spocitej: function (n, lehci, tezsi) {
+    var povinnost = n > 25;
+    var potreba = povinnost ? Math.ceil(n * 0.04) : 0;
+    var zapocteno = lehci + 3 * tezsi;
+    var chybi = Math.max(0, potreba - zapocteno);
+    var procent = n > 0 ? zapocteno / n * 100 : 0;
+    var odvod = chybi * PODIL.koeficient(procent) * PODIL.mzda;
+    var sleva = lehci * PODIL.slevaZP + tezsi * PODIL.slevaTZP;
+    return { povinnost: povinnost, potreba: potreba, zapocteno: zapocteno, chybi: chybi, odvod: odvod, sleva: sleva };
+  }
+};
+(function () {
+  var form = document.getElementById('calc-form');
+  if (!form) return;
+  var kc = new Intl.NumberFormat('cs-CZ', { maximumFractionDigits: 0 });
+  function cislo(id) { var v = parseInt(document.getElementById(id).value, 10); return isNaN(v) || v < 0 ? 0 : v; }
+  function osob(x) { return kc.format(x) + (x === 1 ? ' osoba' : x >= 2 && x <= 4 ? ' osoby' : ' osob'); }
+  function set(id, text) { document.getElementById(id).textContent = text; }
+  var timer;
+  function prepocitej(ohlasit) {
+    var n = cislo('c-n'), l = cislo('c-l'), t = cislo('c-h');
+    var r = PODIL.spocitej(n, l, t);
+    var s = PODIL.spocitej(n, l, t + 1);
+    var uspora = (r.odvod - s.odvod) + PODIL.slevaTZP;
+    set('r-odvod', kc.format(r.odvod) + ' Kč');
+    set('r-need', r.povinnost ? osob(r.potreba) : 'netýká se vás');
+    set('r-have', osob(r.zapocteno));
+    set('r-miss', osob(r.chybi));
+    set('r-tax', kc.format(r.sleva) + ' Kč');
+    var text = (r.povinnost ? 'Odvod ' + kc.format(r.odvod) + ' Kč ročně. ' : 'Povinný podíl se na firmy do 25 zaměstnanců nevztahuje. ') +
+      'Jeden nevidomý kolega s invaliditou třetího stupně by vám ročně ušetřil ' + kc.format(uspora) + ' Kč.';
+    var el = document.getElementById('r-save');
+    if (ohlasit) {
+      clearTimeout(timer);
+      timer = setTimeout(function () { el.innerHTML = text.replace(/ušetřil (.*) Kč\./, 'ušetřil <strong>$1 Kč</strong>.'); }, 700);
+    } else {
+      el.innerHTML = text.replace(/ušetřil (.*) Kč\./, 'ušetřil <strong>$1 Kč</strong>.');
+    }
+  }
+  form.addEventListener('input', function () { prepocitej(true); });
+  form.addEventListener('submit', function (e) { e.preventDefault(); prepocitej(true); });
+  prepocitej(false);
+})();
+</script>
+</body>
+</html>
